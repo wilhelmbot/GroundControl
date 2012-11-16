@@ -53,7 +53,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPShouldHandleCookies:NO];
     [request setHTTPShouldUsePipelining:YES];
-    // [request addValue:@"application/x-plist" forHTTPHeaderField:@"Accept"];
+    [request addValue:@"text/xml" forHTTPHeaderField:@"Accept"];
     
     [self registerDefaultsWithURLRequest:request success:^(__unused NSURLRequest *request, __unused NSHTTPURLResponse *response, NSDictionary *defaults) {
         if (success) {
